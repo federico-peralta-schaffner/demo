@@ -17,12 +17,14 @@ public class JacksonDeepCopy {
 
         System.out.println("BEFORE");
         System.out.println(source);
+        System.out.println();
 
         TargetBean target = mapper.convertValue(source, TargetBean.class);
 
         System.out.println("AFTER CONVERT");
         System.out.println(source);
         System.out.println(target);
+        System.out.println();
 
         target.getNestedBean().setNestedBeanField("newValue");
         target.getNestedBean2().setNestedBeanField("newValue2");
@@ -30,6 +32,7 @@ public class JacksonDeepCopy {
         System.out.println("AFTER set");
         System.out.println(source);
         System.out.println(target);
+        System.out.println();
     }
 
     public static class SourceBean {
